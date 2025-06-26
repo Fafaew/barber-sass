@@ -4,6 +4,8 @@ import React from "react"
 import { Button } from "./_components/ui/button"
 import { SearchIcon } from "lucide-react"
 import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 const Home = () => {
   return (
@@ -26,6 +28,23 @@ const Home = () => {
             fill
             className="rounded-xl object-cover"
           />
+        </div>
+        <div>
+          {/* agendamento */}
+          <Card className="mt-6">
+            <CardContent className="flex justify-between p-0">
+              {/* ESQUERDA */}
+              <div className="flex flex-col gap-2 py-5 pl-5">
+                <Badge>Confirmado</Badge>
+              </div>
+              {/* DIREITA */}
+              <div className="flex flex-col items-center justify-center border-l-2 border-solid px-5">
+                <p className="text-sm">Junho</p>
+                <p className="text-2xl">05</p>
+                <p className="text-sm">15:00</p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
