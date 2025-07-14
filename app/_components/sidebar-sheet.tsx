@@ -6,11 +6,11 @@ import {
 } from "@/components/ui/sheet"
 import { Button } from "./ui/button"
 import { Calendar1Icon, HomeIcon, LogOutIcon } from "lucide-react"
-import { Avatar, AvatarImage } from "@radix-ui/react-avatar"
 import Link from "next/link"
 import Image from "next/image"
 
 import { quickSearchOptions } from "../_constants/search"
+import { Avatar, AvatarImage } from "@/components/ui/avatar"
 
 const SidebarSheet = () => {
   return (
