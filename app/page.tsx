@@ -89,35 +89,37 @@ const Home = async () => {
             className="rounded-xl object-cover"
           />
         </div>
-        <div>
-          <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
-            Agendamentos
-          </h2>
-          {/* agendamento */}
-          <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden">
-            {confirmedBookings.map((booking) => (
-              <BookingItem key={booking.id} booking={booking} />
-            ))}
-          </div>
+        {confirmedBookings.length > 0 && (
+          <>
+            <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+              Agendamentos
+            </h2>
+            {/* agendamento */}
+            <div className="flex gap-3 overflow-x-auto [&::-webkit-scrollbar]:hidden">
+              {confirmedBookings.map((booking) => (
+                <BookingItem key={booking.id} booking={booking} />
+              ))}
+            </div>
+          </>
+        )}
 
-          {/* RECOMENDADOS */}
-          <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
-            Recomendados
-          </h2>
-          <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
-            {barbershops.map((barbershop) => (
-              <BarbershopItem key={barbershop.id} barbershop={barbershop} />
-            ))}
-          </div>
+        {/* RECOMENDADOS */}
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Recomendados
+        </h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {barbershops.map((barbershop) => (
+            <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+          ))}
+        </div>
 
-          <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
-            Populares
-          </h2>
-          <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
-            {popularBarbershops.map((barbershop) => (
-              <BarbershopItem key={barbershop.id} barbershop={barbershop} />
-            ))}
-          </div>
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Populares
+        </h2>
+        <div className="flex gap-4 overflow-auto [&::-webkit-scrollbar]:hidden">
+          {popularBarbershops.map((barbershop) => (
+            <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+          ))}
         </div>
       </div>
     </div>
