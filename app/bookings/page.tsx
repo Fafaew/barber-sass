@@ -74,7 +74,10 @@ const Bookings = async () => {
             </h2>
             <div className="space-y-3">
               {confirmedBookings.map((booking) => (
-                <BookingItem key={booking.id} booking={booking} />
+                <BookingItem
+                  key={booking.id}
+                  booking={JSON.parse(JSON.stringify(booking))}
+                />
               ))}
             </div>
           </>
@@ -87,7 +90,10 @@ const Bookings = async () => {
             </h2>
             <div className="space-y-3">
               {concludedBookings.map((booking) => (
-                <BookingItem key={booking.id} booking={booking} />
+                <BookingItem
+                  key={booking.id}
+                  booking={JSON.parse(JSON.stringify(booking))}
+                />
               ))}
             </div>
           </>
